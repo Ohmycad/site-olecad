@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="theme-color" content="#0D1B3E" />
+<title>{{ title }} — OléCAD</title>
+<meta name="description" content="{{ description or excerpt or 'OléCAD — Partner oficial SOLIDWORKS & 3DEXPERIENCE en España y Portugal. Red Ohmycad.' }}" />
+<link rel="canonical" href="https://olecad.com{{ page.url }}" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+
+<meta property="og:type" content="{{ ogType or 'website' }}" />
+<meta property="og:site_name" content="OléCAD" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description or excerpt or '' }}" />
+<meta property="og:url" content="https://olecad.com{{ page.url }}" />
+<meta property="og:image" content="https://olecad.com{{ cover or '/assets/olecad-mark.png' }}" />
+
+<link rel="icon" type="image/png" href="/assets/favicon.png" />
+<link rel="apple-touch-icon" href="/assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+{% if headExtra %}{{ headExtra | safe }}{% endif %}
+</head>
+<body data-palette="navy-red" data-typo="inter" data-theme="light">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand">
+      <img src="/assets/olecad-mark.png" alt="OléCAD" class="brand-logo" width="44" height="44" style="height:44px;width:44px;border-radius:11px;object-fit:cover;display:block;" />
+    </a>
+    <nav class="main-nav">
+      <a href="/#solutions">Soluciones</a>
+      <a href="/#suite">Suite Dassault</a>
+      <a href="/#network">Red Ohmycad</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <div class="header-spacer"></div>
+    <div class="header-actions">
+      <div class="lang-pill" role="tablist" aria-label="Language">
+        <button data-lang="es" class="active" aria-pressed="true">ES</button>
+        <button data-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <a href="/#contact" class="btn btn-ghost" style="padding: 10px 18px;">Hablar con un experto</a>
+      <a href="/#contact" class="btn btn-primary" style="padding: 10px 18px;">
+        Reservar demo
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <span class="brand-logo-chip" style="background:#fff;border-radius:12px;padding:6px 10px;display:inline-flex;"><img src="/assets/olecad-mark.png" alt="OléCAD" width="36" height="36" style="height:36px;width:36px;border-radius:8px;object-fit:cover;display:block;" /></span>
+        </a>
+        <p class="footer-blurb">Partner oficial Dassault Systèmes en España y Portugal. Implementación, formación y acompañamiento SOLIDWORKS &amp; 3DEXPERIENCE.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Soluciones</h5>
+        <ul>
+          <li><a href="/#suite">SOLIDWORKS</a></li>
+          <li><a href="/#suite">3DEXPERIENCE</a></li>
+          <li><a href="/#suite">SIMULIA</a></li>
+          <li><a href="/#suite">DELMIA</a></li>
+          <li><a href="/#suite">ENOVIA / PDM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="/#team">Equipo</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#network">Red Ohmycad</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="mailto:contacto@olecad.com">contacto@olecad.com</a></li>
+          <li><a href="tel:+34910796903">+34 910 796 903</a></li>
+          <li><a href="tel:+351969563685">+351 969 563 685</a></li>
+          <li><a href="/#contact">Reservar demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 OLE DIGITAL SYSTEMS, S.L. · <a href="/aviso-legal.html" style="color:rgba(255,255,255,0.5);">Aviso legal</a> · <a href="/aviso-legal.html" style="color:rgba(255,255,255,0.5);">Privacidad</a></p>
+      <div class="lang-pill">
+        <button data-lang="es" class="active">ES</button>
+        <button data-lang="pt">PT</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/i18n.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

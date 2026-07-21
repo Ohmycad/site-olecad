@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>OléCAD — Partner oficial SOLIDWORKS &amp; 3DEXPERIENCE | España &amp; Portugal</title>
+<meta name="description" content="OléCAD, partner Dassault Systèmes en España y Portugal. SOLIDWORKS, 3DEXPERIENCE, PDM, Simulación. Acompañamiento dedicado para startups, PYMEs y bureaux d'études." />
+<meta name="theme-color" content="#0D1B3E" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-palette="navy-red" data-typo="inter" data-theme="light">
+
+<!-- ════════════════════════════ HEADER ════════════════════════════ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="brand">
+      <img src="assets/olecad-mark.png" alt="OléCAD" class="brand-logo" width="44" height="44" style="height:44px;width:44px;border-radius:11px;object-fit:cover;display:block;" />
+    </a>
+    <nav class="main-nav">
+      <a href="#solutions" data-i18n="nav_solutions">Soluciones</a>
+      <a href="#suite" data-i18n="nav_suite">Suite Dassault</a>
+      <a href="#network" data-i18n="nav_network">Red Ohmycad</a>
+      <a href="#team" data-i18n="nav_team">Equipo</a>
+      <a href="/blog/">Blog</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </nav>
+    <div class="header-spacer"></div>
+    <div class="header-actions">
+      <div class="lang-pill" role="tablist" aria-label="Language">
+        <button data-lang="es" class="active" aria-pressed="true">ES</button>
+        <button data-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <a href="#contact" class="btn btn-ghost" style="padding: 10px 18px;" data-i18n="cta_expert">Hablar con un experto</a>
+      <a href="#contact" class="btn btn-primary" style="padding: 10px 18px;" data-i18n="cta_book">
+        Reservar demo
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ════════════════════════════ HERO ════════════════════════════ -->
+<section class="hero" id="home" data-screen-label="01 Hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow reveal">
+        <span class="dot"></span>
+        <span data-i18n="hero_eyebrow">Partner oficial Dassault Systèmes · España &amp; Portugal</span>
+      </div>
+      <h1 class="reveal r-d1" data-i18n-html="hero_title">
+        SOLIDWORKS y <em>3DEXPERIENCE</em>,<br />
+        sin <span class="ink-underline">fricciones</span>.
+      </h1>
+      <p class="hero-sub reveal r-d2" data-i18n="hero_sub">
+        Implantación, formación y acompañamiento dedicados para startups deeptech,
+        PYMEs industriales, freelances y grandes cuentas — con la solidez de la red
+        Ohmycad, n.º 1 mundial Dassault Systèmes en 2025.
+      </p>
+      <div class="hero-meta reveal r-d3">
+        <div class="hero-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <span data-i18n="hero_meta_1">Google 4,9 · 300+ reseñas</span>
+        </div>
+        <div class="hero-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#43E97B" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          <span data-i18n="hero_meta_2">Licencia de arranque gratuita</span>
+        </div>
+        <div class="hero-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#43E97B" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          <span data-i18n="hero_meta_3">Respuesta &lt; 24 h</span>
+        </div>
+      </div>
+      <div class="hero-cta-row reveal r-d4">
+        <a href="#contact" class="btn btn-primary">
+          <span data-i18n="hero_cta_1">Reservar 30 min con un experto</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#suite" class="btn btn-outline-light" data-i18n="hero_cta_2">Ver el catálogo</a>
+      </div>
+    </div>
+
+    <!-- Booking card right -->
+    <div class="hero-right reveal from-right r-d2">
+      <div class="booking-card" id="bookingCard">
+        <div class="booking-card-inner">
+          <div class="booking-header">
+            <div class="booking-title">
+              <span class="booking-title-dot"></span>
+              <span data-i18n="book_title">Agenda tu demo</span>
+            </div>
+            <div class="booking-step" id="bookStep">02 · 03</div>
+          </div>
+          <div class="booking-progress">
+            <span class="on"></span>
+            <span class="on cur"></span>
+            <span></span>
+          </div>
+
+          <div class="booking-question" data-i18n="book_q">¿Qué necesitas explorar primero?</div>
+          <div class="booking-options">
+            <button class="booking-opt sel" type="button">
+              <strong>SOLIDWORKS 3D</strong>
+              <span class="opt-sub">CAD · PDM</span>
+            </button>
+            <button class="booking-opt" type="button">
+              <strong>3DEXPERIENCE</strong>
+              <span class="opt-sub">Cloud · Collab</span>
+            </button>
+            <button class="booking-opt" type="button">
+              <strong>Simulación</strong>
+              <span class="opt-sub">SIMULIA · FEA</span>
+            </button>
+            <button class="booking-opt" type="button">
+              <strong>Eléctrico</strong>
+              <span class="opt-sub">Electrical · ECAD</span>
+            </button>
+          </div>
+
+          <div class="booking-field-row">
+            <input class="booking-input" type="email" placeholder="tu@empresa.com" />
+            <input class="booking-input" type="tel" placeholder="+34 · Teléfono" />
+          </div>
+          <button class="booking-cta" type="button" id="bookSubmit">
+            <span data-i18n="book_cta">Ver mis horarios disponibles</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <div class="booking-foot">
+            <span data-i18n="book_foot1">↳ 30 min · video · sin compromiso</span>
+            <span data-i18n="book_foot2">PT · ES</span>
+          </div>
+        </div>
+      </div>
+      <div class="float-chip c1">
+        <span class="float-chip-dot">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <span data-i18n="chip_1">+1.500 clientes en Europa</span>
+      </div>
+      <div class="float-chip c2">
+        <span class="float-chip-dot">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </span>
+        <span data-i18n="chip_2">Partner Dassault #1 mundial · 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-strip">
+    <div class="container hero-strip-inner">
+      <div class="hero-stat">
+        <div class="hero-stat-num">+<em data-counter="1500">1500</em></div>
+        <div class="hero-stat-label" data-i18n="stat_1">clientes acompañados en Europa</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><em>#1</em> 2025</div>
+        <div class="hero-stat-label" data-i18n="stat_2">Partner Dassault mundial</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">&lt;<em data-counter="24">24</em> h</div>
+        <div class="hero-stat-label" data-i18n="stat_3">tiempo de respuesta garantizado</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><em>100</em>%</div>
+        <div class="hero-stat-label" data-i18n="stat_4">soluciones Dassault Systèmes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ MARQUEE ════════════════════════════ -->
+<section class="marquee-wrap">
+  <div class="marquee-label" data-i18n="marquee_label">Confiado por equipos de ingeniería en España, Portugal y toda Europa</div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">SOLIDWORKS</span>
+      <span class="marquee-item">3DEXPERIENCE</span>
+      <span class="marquee-item">SIMULIA</span>
+      <span class="marquee-item">DELMIA</span>
+      <span class="marquee-item">CATIA</span>
+      <span class="marquee-item">ENOVIA</span>
+      <span class="marquee-item">3DEXCITE</span>
+      <span class="marquee-item">Ohmycad Network</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">SOLIDWORKS</span>
+      <span class="marquee-item">3DEXPERIENCE</span>
+      <span class="marquee-item">SIMULIA</span>
+      <span class="marquee-item">DELMIA</span>
+      <span class="marquee-item">CATIA</span>
+      <span class="marquee-item">ENOVIA</span>
+      <span class="marquee-item">3DEXCITE</span>
+      <span class="marquee-item">Ohmycad Network</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ 3 PILIERS ════════════════════════════ -->
+<section class="sec" id="solutions" data-screen-label="02 Solutions">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="pillars_eyebrow">Nuestro enfoque</div>
+      <h2 class="h-2" data-i18n="pillars_h2">Tres pilares para sacar todo el partido a tu ecosistema Dassault.</h2>
+      <p class="lead" data-i18n="pillars_lead">
+        Desde la selección de la oferta hasta la puesta en producción y la optimización
+        continua: un único interlocutor experto y un método claro.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <article class="pillar reveal r-d1">
+        <span class="pillar-num">01</span>
+        <div class="pillar-img"><img src="assets/app-render.webp" alt="El nuevo SOLIDWORKS" /></div>
+        <div class="pillar-body">
+          <h3 data-i18n="pillar1_t">El nuevo SOLIDWORKS</h3>
+          <p data-i18n="pillar1_p">
+            Implementamos un entorno SOLIDWORKS más rápido, multi-puesto y preparado
+            para la colaboración a distancia — siempre con la versión más reciente.
+          </p>
+          <span class="pillar-link">
+            <span data-i18n="pillar1_link">Descubrir</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="pillar reveal r-d2">
+        <span class="pillar-num">02</span>
+        <div class="pillar-img"><img src="assets/logo-olecad.webp" alt="3DEXPERIENCE" /></div>
+        <div class="pillar-body">
+          <h3 data-i18n="pillar2_t">Integrado en 3DEXPERIENCE</h3>
+          <p data-i18n="pillar2_p">
+            Acceso fluido y centralizado a tus datos, proyectos y equipos en una
+            única plataforma cloud, con la suite completa de aplicaciones Dassault.
+          </p>
+          <span class="pillar-link">
+            <span data-i18n="pillar2_link">Explorar</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="pillar reveal r-d3">
+        <span class="pillar-num">03</span>
+        <div class="pillar-img"><img src="assets/photo-accompagnement.webp" alt="Acompañamiento" /></div>
+        <div class="pillar-body">
+          <h3 data-i18n="pillar3_t">Un acompañamiento a medida</h3>
+          <p data-i18n="pillar3_p">
+            Auditoría, implementación, formación y evolución: cada proyecto es
+            conducido con metodología clara y un ingeniero dedicado a tu cuenta.
+          </p>
+          <span class="pillar-link">
+            <span data-i18n="pillar3_link">Saber más</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ SUITE / APPS ════════════════════════════ -->
+<section class="sec apps-section" id="suite" data-screen-label="03 Suite">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="suite_eyebrow">Suite Dassault Systèmes</div>
+      <h2 class="h-2" data-i18n="suite_h2">Todas las herramientas necesarias para diseñar, simular y fabricar.</h2>
+      <p class="lead" data-i18n="suite_lead">
+        Desde la concepción hasta la producción, centraliza, simula y acelera tus
+        proyectos con la mejor solución del mercado.
+      </p>
+    </div>
+
+    <div class="apps-grid">
+      <article class="app featured reveal r-d1">
+        <div class="app-head">
+          <div class="app-icon"><img src="assets/team-arthur.webp" alt="SOLIDWORKS" /></div>
+          <span class="app-name" data-i18n="app_sw_name">SOLIDWORKS</span>
+        </div>
+        <h3 class="app-title" data-i18n="app_sw_title">Diseño 3D, líder indiscutible del CAD mecánico.</h3>
+        <p class="app-desc" data-i18n="app_sw_desc">
+          Diseña piezas, ensamblajes y productos con la precisión y la productividad
+          del CAD n.º 1 del mercado, ahora conectado al cloud 3DEXPERIENCE.
+        </p>
+        <div class="app featured-screen" style="background:#0D1B3E;">
+          <img src="assets/icon-sw.webp" alt="3DEXPERIENCE SOLIDWORKS" style="object-fit:cover;border-radius:12px;" />
+        </div>
+      </article>
+
+      <article class="app reveal r-d2">
+        <div class="app-head">
+          <div class="app-icon"><img src="assets/screen-simulation.webp" alt="PDM" /></div>
+          <span class="app-name">PDM &amp; ENOVIA</span>
+        </div>
+        <h3 class="app-title" data-i18n="app_pdm_title">Gestión de datos técnicos</h3>
+        <p class="app-desc" data-i18n="app_pdm_desc">
+          Centraliza archivos, versiones y listas de materiales en un espacio cloud
+          seguro, auditado y multi-equipo.
+        </p>
+      </article>
+
+      <article class="app reveal r-d3">
+        <div class="app-head">
+          <div class="app-icon"><img src="assets/screen-delmia.webp" alt="SIMULIA" /></div>
+          <span class="app-name">SIMULIA</span>
+        </div>
+        <h3 class="app-title" data-i18n="app_sim_title">Simulación local y cloud</h3>
+        <p class="app-desc" data-i18n="app_sim_desc">
+          Valida tus diseños antes de producir con SOLIDWORKS Simulation y SIMULIA —
+          estructural, térmica, fluidos, fatiga.
+        </p>
+      </article>
+
+      <article class="app reveal r-d2">
+        <div class="app-head">
+          <div class="app-icon"><img src="assets/app-enovia.webp" alt="DELMIA" /></div>
+          <span class="app-name">DELMIA</span>
+        </div>
+        <h3 class="app-title" data-i18n="app_del_title">Planificación &amp; fabricación</h3>
+        <p class="app-desc" data-i18n="app_del_desc">
+          Simula tus líneas de producción, organiza tus flujos y gestiona tus
+          recursos industriales con DELMIA.
+        </p>
+      </article>
+
+      <article class="app reveal r-d3">
+        <div class="app-head">
+          <div class="app-icon"><img src="assets/app-simulia.webp" alt="Electrical" /></div>
+          <span class="app-name">ELECTRICAL</span>
+        </div>
+        <h3 class="app-title" data-i18n="app_el_title">Eléctrico &amp; esquemático</h3>
+        <p class="app-desc" data-i18n="app_el_desc">
+          Diseña tus sistemas eléctricos en un entorno unificado, sincronizando 2D
+          y 3D, mecánica y eléctrica.
+        </p>
+      </article>
+
+      <article class="app app-all reveal r-d4">
+        <div>
+          <span class="price-name" style="color:rgba(255,255,255,0.7);" data-i18n="all_apps_eyebrow">El ecosistema completo</span>
+          <h3 data-i18n="all_apps_title">CATIA, 3DEXCITE, ENOVIA, NETVIBES… más de 50 aplicaciones disponibles.</h3>
+        </div>
+        <a href="#contact" class="btn">
+          <span data-i18n="all_apps_cta">Ver todo el catálogo</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ SPLIT 1 — Nouveau SW ════════════════════════════ -->
+<section class="split" data-screen-label="04 New SW">
+  <div class="split-media reveal from-left" style="background:#0D1B3E;">
+    <img src="assets/screen-sw-3d.webp" alt="SOLIDWORKS Connected" />
+    <div class="split-media-overlay">SOLIDWORKS Connected · entorno multiusuario</div>
+  </div>
+  <div class="split-text reveal from-right">
+    <div class="eyebrow" data-i18n="split1_eyebrow">El nuevo SOLIDWORKS</div>
+    <h2 class="h-2" data-i18n="split1_h2">Más rápido, más ágil, más conectado.</h2>
+    <p data-i18n="split1_p1">
+      SOLIDWORKS multiusuario, con tus datos 3D accesibles desde cualquier dispositivo.
+      Adiós a las máquinas potentes obligatorias y a las versiones desincronizadas.
+    </p>
+    <ul class="bullets">
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-i18n="split1_b1">Reducción de costes de infraestructura e IT</span>
+      </li>
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-i18n="split1_b2">Backup seguro en la plataforma 3DEXPERIENCE</span>
+      </li>
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-i18n="split1_b3">Suscripción flexible con sistema de licencia nominal</span>
+      </li>
+    </ul>
+    <a href="#contact" class="btn btn-primary">
+      <span data-i18n="split1_cta">Pedir una demo guiada</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════ OHMYCARE ════════════════════════════ -->
+<section class="sec" id="care" data-screen-label="05 OhMyCare">
+  <div class="container">
+    <div class="care reveal">
+      <div>
+        <div class="care-pill" data-i18n="care_pill">⚡ OhMyCare · incluido</div>
+        <h2 data-i18n="care_h2">Optimización continua de tu uso SOLIDWORKS y PDM.</h2>
+        <p data-i18n="care_p">
+          OhMyCare es la suscripción de mejora continua de OléCAD. Accede a una red
+          de expertos P2P, tickets ilimitados, sesiones de coaching mensuales y un
+          plan de evolución personalizado para tu equipo de ingeniería.
+        </p>
+        <a href="#contact" class="btn btn-primary">
+          <span data-i18n="care_cta">Solicitar más información</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="care-price-card">
+        <div class="care-price-label" data-i18n="care_price_label">A partir de</div>
+        <div class="care-price">
+          <span class="care-price-num">50€</span>
+          <span class="care-price-unit" data-i18n="care_price_unit">/ usuario / mes</span>
+        </div>
+        <div class="care-price-sub" data-i18n="care_price_sub">Sin compromiso · facturación anual o mensual</div>
+        <ul class="care-features">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="care_f1">Acceso ilimitado a la red P2P de expertos</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="care_f2">Sesiones de coaching mensuales 1-a-1</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="care_f3">Plan de evolución personalizado</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="care_f4">Soporte ES · PT · EN · FR</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ CASE STUDY ════════════════════════════ -->
+<section class="sec sec-alt" id="cases" data-screen-label="06 Cases">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="cases_eyebrow">Casos cliente</div>
+      <h2 class="h-2" data-i18n="cases_h2">Cómo nuestros clientes ganan tiempo, dinero y tranquilidad.</h2>
+    </div>
+
+    <div class="case-grid">
+      <article class="case reveal r-d1">
+        <div class="case-media"><img src="assets/photo-network.webp" alt="Caso industrial" /></div>
+        <div class="case-body">
+          <div class="case-tag" data-i18n="case1_tag">PYME industrial</div>
+          <h3 data-i18n="case1_t">Migración SOLIDWORKS → 3DEXPERIENCE, sin interrumpir la producción</h3>
+          <p data-i18n="case1_p">
+            Auditoría, plan de migración, formación y go-live: la transición se
+            completa con un ingeniero dedicado. PDM en cloud, datos centralizados,
+            acceso desde cualquier dispositivo.
+          </p>
+        </div>
+      </article>
+
+      <article class="case reveal r-d2">
+        <div class="case-media" style="background:#14245A;"><img src="assets/team-ohmycad.webp" alt="Caso startup" /></div>
+        <div class="case-body">
+          <div class="case-tag" data-i18n="case2_tag">Startup deeptech</div>
+          <h3 data-i18n="case2_t">Arrancar con licencia de SOLIDWORKS gratuita</h3>
+          <p data-i18n="case2_p">
+            Gracias a partenariados institucionales,
+            tu startup hardware accede a SOLIDWORKS y 3DEXPERIENCE sin coste
+            inicial, con onboarding completo y tarifas preferentes a la escala.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ SPLIT 2 — Red Ohmycad ════════════════════════════ -->
+<section class="split dark" id="network" data-screen-label="07 Network">
+  <div class="split-text dark reveal from-left">
+    <div class="eyebrow on-dark" data-i18n="network_eyebrow">Red Ohmycad</div>
+    <h2 class="h-2" data-i18n="network_h2">La experiencia OléCAD, la fuerza de Ohmycad.</h2>
+    <p data-i18n="network_p1">
+      Como partner certificado, OléCAD se apoya en la red Ohmycad — n.º 1 mundial
+      Dassault Systèmes en 2025.
+    </p>
+    <p data-i18n="network_p2">
+      Procedimientos probados, soporte de nivel internacional y proximidad real en
+      España y Portugal: lo mejor de los dos mundos.
+    </p>
+    <a href="https://ohmycad.com/" class="btn btn-white">
+      <span data-i18n="network_cta">Descubrir la red Ohmycad</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="split-media reveal from-right">
+    <img src="assets/team-ohmycad.webp" alt="Équipe Ohmycad" />
+    <div class="split-media-overlay">Ohmycad Team · 50+ ingenieros en Europa</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ TESTIMONIALS ════════════════════════════ -->
+<section class="sec sec-alt" id="testimonials" data-screen-label="09 Testimonials">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="eyebrow" data-i18n="testi_eyebrow">Testimonios</div>
+      <h2 class="h-2" data-i18n="testi_h2">+1.500 equipos de ingeniería ya confían en OléCAD.</h2>
+    </div>
+
+    <div class="real-review reveal r-d1">
+      <div class="real-review-stars" style="display:flex;gap:3px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+      </div>
+      <p class="real-review-text" data-i18n="review_mohammad">
+        “I had a great technical support session with Alan and Léo from Ohmycad. They explained
+        clearly how to save files on 3DEXPERIENCE and manage revisions with the maturity cycle.
+        The session was very helpful, professional, and easy to follow. Highly recommend their
+        support team!”
+      </p>
+      <div class="real-review-author">
+        <span class="real-review-avatar">M</span>
+        <span>
+          <strong>Mohammad Aghababa</strong>
+          <span class="real-review-meta" data-i18n="review_meta">Reseña verificada · Google</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="proof-widget reveal r-d1">
+      <div class="proof-widget-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#FBBC05"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0 0 12 23z" fill="#34A853"/><path d="M5.84 14.1A6.59 6.59 0 0 1 5.45 12c0-.73.13-1.44.39-2.1V7.07H2.18A10.99 10.99 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.83z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg>
+      </div>
+      <div class="proof-widget-stars" style="display:flex;gap:3px;justify-content:center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+      </div>
+      <div class="proof-widget-num">4,9 / 5</div>
+      <div class="proof-widget-sub" data-i18n="proof_widget_sub">basado en más de 300 reseñas Google verificadas</div>
+    </div>
+
+    <div class="review-strip reveal">
+      <div class="review-strip-item">
+        <div>
+          <div class="review-strip-num">4,9 / 5</div>
+          <div class="review-strip-label" data-i18n="rs_1">300+ reseñas Google</div>
+        </div>
+        <div class="review-strip-stars" style="display:flex;gap:2px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+      </div>
+      <div class="review-strip-div"></div>
+      <div class="review-strip-item">
+        <div>
+          <div class="review-strip-num">+1.500</div>
+          <div class="review-strip-label" data-i18n="rs_2">clientes activos</div>
+        </div>
+      </div>
+      <div class="review-strip-div"></div>
+      <div class="review-strip-item">
+        <div>
+          <div class="review-strip-num">98%</div>
+          <div class="review-strip-label" data-i18n="rs_3">tasa de renovación</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ TEAM ════════════════════════════ -->
+<section class="sec" id="team" data-screen-label="10 Team">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="team_eyebrow">Nuestro equipo</div>
+      <h2 class="h-2" data-i18n="team_h2">Agilidad al servicio de tu desarrollo.</h2>
+      <p class="lead" data-i18n="team_lead">
+        Fundada por jóvenes emprendedores especialistas en SOLIDWORKS, OléCAD propone
+        una nueva forma de implementar las herramientas de Dassault Systèmes: simple,
+        eficiente y lista para usar.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      <article class="team-card reveal r-d1">
+        <div class="team-photo"><img src="assets/photo-integration.webp" alt="Arthur Dussaubat" /></div>
+        <div class="team-info">
+          <div class="team-name">Arthur Dussaubat</div>
+          <div class="team-role" data-i18n="team_arthur_r">Cofundador · Desarrollo de negocio</div>
+          <p class="team-bio" data-i18n="team_arthur_b">
+            Especialista en desarrollo de negocio para startups y PYMEs. Con un sólido
+            background comercial y experiencia en entornos dinámicos, Arthur aporta una
+            visión estratégica para acompañar a jóvenes empresas en la adopción de
+            soluciones tecnológicas que impulsan su crecimiento.
+          </p>
+        </div>
+      </article>
+
+      <article class="team-card reveal r-d2">
+        <div class="team-photo"><img src="assets/photo-leo.webp" alt="Léo Cosnier" /></div>
+        <div class="team-info">
+          <div class="team-name">Léo Cosnier</div>
+          <div class="team-role" data-i18n="team_leo_r">Cofundador · Ingeniero SOLIDWORKS &amp; 3DEXPERIENCE</div>
+          <p class="team-bio" data-i18n="team_leo_b">
+            Ingeniero mecánico especializado en SOLIDWORKS y 3DEXPERIENCE. Con experiencia
+            en equipos técnicos de adopción de soluciones SOLIDWORKS, Léo domina plenamente
+            las herramientas y su aplicación. Su objetivo: ayudar a las empresas a sacar el
+            máximo partido de las soluciones CAD y PLM.
+          </p>
+        </div>
+      </article>
+
+      <article class="team-card collective reveal r-d3">
+        <div class="team-info">
+          <div class="team-role" data-i18n="team_collective_r">Red Ohmycad</div>
+          <div class="team-name" data-i18n="team_collective_t">+50 expertos Dassault disponibles en toda Europa.</div>
+          <p class="team-bio" data-i18n="team_collective_b">
+            Cuando un proyecto necesita una expertise puntual (SIMULIA, ENOVIA,
+            simulación avanzada…), movilizamos al especialista adecuado.
+          </p>
+          <a href="https://ohmycad.com/" class="btn btn-outline-light" style="margin-top:18px;align-self:flex-start;">
+            <span data-i18n="team_collective_cta">Ver la red completa</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ FAQ ════════════════════════════ -->
+<section class="sec sec-alt" id="faq" data-screen-label="11 FAQ">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="sec-head reveal" style="margin-bottom:0;">
+        <div class="eyebrow" data-i18n="faq_eyebrow">Preguntas frecuentes</div>
+        <h2 class="h-2" data-i18n="faq_h2">Todo lo que necesitas saber antes de empezar.</h2>
+        <p class="lead" style="margin-top:20px;" data-i18n="faq_lead">
+          ¿No encuentras tu respuesta? Reserva 30 min con un experto, sin compromiso.
+        </p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:24px;">
+          <span data-i18n="faq_cta">Hablar con un experto</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="faq-list reveal r-d1">
+        <details class="faq-item" open>
+          <summary>
+            <span data-i18n="faq_q1">¿Qué diferencia hay entre SOLIDWORKS desktop y 3DEXPERIENCE SOLIDWORKS?</span>
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p data-i18n="faq_a1">
+            La versión 3DEXPERIENCE añade el cloud, la colaboración en tiempo real
+            y el acceso multidispositivo, sin renunciar a las herramientas que
+            conoces. Te ayudamos a evaluar qué versión encaja con tu equipo.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq_q2">¿Soy una startup. Existen tarifas adaptadas?</span>
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p data-i18n="faq_a2">
+            Sí. A través de partenariados institucionales,
+            ofrecemos licencias de arranque gratuitas durante 12 meses y tarifas
+            preferentes para startups deeptech. Reserva una llamada para ver tu
+            elegibilidad.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq_q3">¿Cuánto tarda una implementación típica?</span>
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p data-i18n="faq_a3">
+            Para una PYME industrial, contamos entre 4 y 8 semanas para llegar al
+            go-live (auditoría, instalación, migración PDM, formación). Para una
+            startup, 10 días.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq_q4">¿Qué incluye OhMyCare?</span>
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p data-i18n="faq_a4">
+            Acceso ilimitado a nuestra red P2P de expertos, sesiones mensuales de
+            coaching 1-a-1, tickets ilimitados y un plan de evolución personalizado.
+            50€ por usuario al mes, sin compromiso.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq_q5">¿Puedo combinar SOLIDWORKS y otras aplicaciones Dassault?</span>
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p data-i18n="faq_a5">
+            Sí — toda la suite Dassault está disponible: SIMULIA (simulación), DELMIA
+            (fabricación), CATIA (CAD avanzado), ENOVIA (PLM), 3DEXCITE (rendering).
+            Construimos contigo el bundle adecuado.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq_q6">¿En qué idiomas dais soporte?</span>
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p data-i18n="faq_a6">
+            Español, portugués, inglés y francés. Tu ingeniero dedicado habla tu
+            idioma — y la red Ohmycad nos permite escalar en alemán e italiano si
+            es necesario.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ FINAL CTA ════════════════════════════ -->
+<section class="final-cta" id="contact" data-screen-label="12 CTA">
+  <div class="container final-cta-inner reveal">
+    <h2 data-i18n="cta_h2">Tu próximo proyecto Dassault empieza con una conversación de 30 minutos.</h2>
+    <p data-i18n="cta_p">
+      Sin fuerza de venta. Sin compromiso. Un experto te llama, escucha tu
+      contexto y te propone la configuración adecuada.
+    </p>
+    <div class="final-cta-row">
+      <a href="https://outlook.office.com/bookwithme/user/09d3b17cd9c04489bcd5ed8c80cec0d9@OleCAD.com/meetingtype/Nh3agclOaUeDFWI9cjWvMw2?anonymous&amp;ep=mLinkFromTile" target="_blank" rel="noopener" class="btn btn-primary">
+        <span data-i18n="cta_main">Reservar 30 min con un experto</span>
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="mailto:contacto@olecad.com" class="btn btn-outline-light" data-i18n="cta_alt">o escríbenos a contacto@olecad.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ FOOTER ════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <span class="brand-logo-chip" style="background:#fff;border-radius:12px;padding:6px 10px;display:inline-flex;"><img src="assets/olecad-mark.png" alt="OléCAD" width="36" height="36" style="height:36px;width:36px;border-radius:8px;object-fit:cover;display:block;" /></span>
+        </a>
+        <p class="footer-blurb" data-i18n="footer_blurb">
+          Partner oficial Dassault Systèmes en España y Portugal. Implementación,
+          formación y acompañamiento SOLIDWORKS &amp; 3DEXPERIENCE.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_h_sol">Soluciones</h5>
+        <ul>
+          <li><a href="#suite">SOLIDWORKS</a></li>
+          <li><a href="#suite">3DEXPERIENCE</a></li>
+          <li><a href="#suite">SIMULIA</a></li>
+          <li><a href="#suite">DELMIA</a></li>
+          <li><a href="#suite">ENOVIA / PDM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_h_co">Empresa</h5>
+        <ul>
+          <li><a href="#team" data-i18n="footer_team">Equipo</a></li>
+          <li><a href="#cases" data-i18n="footer_cases">Casos cliente</a></li>
+          <li><a href="#network" data-i18n="footer_network">Red Ohmycad</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_h_ct">Contacto</h5>
+        <ul>
+          <li><a href="mailto:contacto@olecad.com">contacto@olecad.com</a></li>
+          <li><a href="tel:+34910796903">+34 910 796 903</a></li>
+          <li><a href="tel:+351969563685">+351 969 563 685</a></li>
+          <li><a href="#contact" data-i18n="footer_book">Reservar demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 OLE DIGITAL SYSTEMS, S.L. · <a href="aviso-legal.html" style="color:rgba(255,255,255,0.5);">Aviso legal</a> · <a href="aviso-legal.html" style="color:rgba(255,255,255,0.5);">Privacidad</a></p>
+      <div class="lang-pill">
+        <button data-lang="es" class="active">ES</button>
+        <button data-lang="pt">PT</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════ APP SCRIPTS ════════════════════════════ -->
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
