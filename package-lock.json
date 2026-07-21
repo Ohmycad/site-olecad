@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: Blog
+permalink: /blog/
+description: Blog de OléCAD — SOLIDWORKS, 3DEXPERIENCE y práctica del diseño con las herramientas Dassault Systèmes.
+---
+<section class="blog-section">
+  <div class="container">
+    <div class="blog-head">
+      <span class="blog-eyebrow"><span class="dot"></span> Blog</span>
+      <h1 class="blog-h1">Ideas, consejos y novedades del mundo CAD.</h1>
+      <p class="blog-lede">SOLIDWORKS, 3DEXPERIENCE y el día a día con las herramientas Dassault — explicado de forma práctica.</p>
+      <div class="blog-cats">
+        <a class="blog-cat is-active" href="/blog/">Todos</a>
+        {% for c in collections.categories %}
+        <a class="blog-cat" href="/blog/categoria/{{ c.slug }}/">{{ c.name }} ({{ c.count }})</a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="blog-grid">
+      {% for post in collections.post %}
+      <a class="blog-card" href="{{ post.url }}">
+        {% if post.data.cover %}<div class="blog-card__img"><img src="{{ post.data.cover }}" alt="" loading="lazy" /></div>{% endif %}
+        <div class="blog-card__body">
+          <span class="blog-card__cat">{{ post.data.category }}</span>
+          <h3 class="blog-card__title">{{ post.data.title }}</h3>
+          <p class="blog-card__excerpt">{{ post.data.excerpt }}</p>
+          <span class="blog-card__meta">{{ post.date | dateES }}</span>
+        </div>
+      </a>
+      {% endfor %}
+      {% if collections.post.length == 0 %}
+      <p style="color:var(--c-muted);">Pronto más — el primer artículo está en preparación.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
