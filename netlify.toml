@@ -1,34 +1,22 @@
----
-layout: layouts/base.njk
-pagination:
-  data: collections.categories
-  size: 1
-  alias: cat
-permalink: "/blog/categoria/{{ cat.slug }}/"
-eleventyComputed:
-  title: "Blog — {{ cat.name }}"
-  description: "Artículos de OléCAD en la categoría {{ cat.name }}."
----
-<section class="blog-section">
-  <div class="container">
-    <div class="blog-head">
-      <p class="post__back"><a href="/blog/">← Todos los artículos</a></p>
-      <span class="blog-eyebrow"><span class="dot"></span> Categoría</span>
-      <h1 class="blog-h1">{{ cat.name }}</h1>
-    </div>
-    <div class="blog-grid">
-      {% set posts = collections.post | byCategory(cat.name) %}
-      {% for post in posts %}
-      <a class="blog-card" href="{{ post.url }}">
-        {% if post.data.cover %}<div class="blog-card__img"><img src="{{ post.data.cover }}" alt="" loading="lazy" /></div>{% endif %}
-        <div class="blog-card__body">
-          <span class="blog-card__cat">{{ post.data.category }}</span>
-          <h3 class="blog-card__title">{{ post.data.title }}</h3>
-          <p class="blog-card__excerpt">{{ post.data.excerpt }}</p>
-          <span class="blog-card__meta">{{ post.date | dateES }}</span>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+# Netlify — OléCAD (Eleventy build)
+[build]
+  command = "npm run build"
+  publish = "_site"
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "https://www.olecad.com/*"
+  to = "https://olecad.com/:splat"
+  status = 301
+  force = true

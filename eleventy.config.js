@@ -1,28 +1,53 @@
----
-layout: layouts/base.njk
-ogType: article
-headExtra: |
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"{{ title }}","datePublished":"{{ page.date | isoDate }}","author":{"@type":"Person","name":"{{ author or 'Equipo OléCAD' }}"},"publisher":{"@type":"Organization","name":"OléCAD","logo":{"@type":"ImageObject","url":"https://olecad.com/assets/olecad-mark.png"}},"mainEntityOfPage":"https://olecad.com{{ page.url }}"}
-  </script>
----
-<article class="post">
-  <div class="container post__wrap">
-    <p class="post__back"><a href="/blog/">← Volver al blog</a></p>
-    <span class="post__kicker">{{ category or 'Blog' }}</span>
-    <h1 class="post__title">{{ title }}</h1>
-    <div class="post__meta">
-      <span>{{ page.date | dateES }}</span><span>·</span><span>{{ author or 'Equipo OléCAD' }}</span>
-    </div>
-    {% if cover %}<img class="post__cover" src="{{ cover }}" alt="{{ title }}" loading="eager" />{% endif %}
-    <div class="post__body">
-      {{ content | safe }}
-    </div>
-    <div class="post__foot">
-      {% if category %}<a class="post__more" href="/blog/categoria/{{ category | slug }}/">Más de «{{ category }}»</a>{% endif %}
-      <a class="btn btn-primary" href="/#contact">Reservar demo
-        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </div>
-</article>
+const slugify = (s) =>
+  (s || "")
+    .toString()
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+module.exports = function (eleventyConfig) {
+  // --- Static marketing site: copied verbatim, never templated ---
+  const passthrough = [
+    "src/assets",
+    "src/screenshots",
+    "src/styles.css",
+    "src/app.js",
+    "src/i18n.js",
+    "src/admin",
+    "src/index.html",
+    "src/aviso-legal.html",
+  ];
+  passthrough.forEach((p) => eleventyConfig.addPassthroughCopy(p));
+  ["src/index.html", "src/aviso-legal.html"].forEach((p) => eleventyConfig.ignores.add(p));
+
+  // --- Filters ---
+  eleventyConfig.addFilter("slug", slugify);
+  eleventyConfig.addFilter("dateES", (d) =>
+    new Date(d).toLocaleDateString("es-ES", { year: "numeric", month: "long", day: "numeric" })
+  );
+  eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString());
+  eleventyConfig.addFilter("byCategory", (posts, name) =>
+    (posts || []).filter((p) => p.data.category === name)
+  );
+
+  // --- Collections ---
+  eleventyConfig.addCollection("post", (c) =>
+    c.getFilteredByTag("post").sort((a, b) => b.date - a.date)
+  );
+  eleventyConfig.addCollection("categories", (c) => {
+    const map = new Map();
+    c.getFilteredByTag("post").forEach((p) => {
+      const cat = p.data.category;
+      if (cat) map.set(cat, (map.get(cat) || 0) + 1);
+    });
+    return [...map.entries()].map(([name, count]) => ({ name, slug: slugify(name), count }));
+  });
+
+  return {
+    dir: { input: "src", includes: "_includes", output: "_site" },
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+  };
+};
