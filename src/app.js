@@ -111,9 +111,9 @@
   };
 
   // ─────────────── Booking card behaviour ───────────────
-  // ⚠️  Pega aquí tu clave de acceso Web3Forms (https://web3forms.com — gratis).
-  //     Mientras quede el valor por defecto, el formulario abre el cliente de correo.
-  const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+  // Envío al formulario HubSpot « OléCAD · Contacto web » (notifica a Arthur y Léo).
+  // Si el envío falla, se abre el cliente de correo como respaldo.
+  const OLE_FORM = '2d4abc8c-a319-4faf-86f2-019262870e1e';
 
   const initBooking = () => {
     const card = document.getElementById('bookingCard');
@@ -164,36 +164,18 @@
       submit.disabled = true;
       submit.innerHTML = 'Enviando…';
 
-      // Fallback: sin clave configurada todavía → abrir cliente de correo.
-      if (!WEB3FORMS_KEY || WEB3FORMS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-        const subject = encodeURIComponent('Solicitud de demo OléCAD');
-        const body = encodeURIComponent(
-          'Interés: ' + interest + '\nEmail: ' + email + '\nTeléfono: ' + phone
-        );
-        window.location.href =
-          'mailto:contacto@olecad.com?subject=' + subject + '&body=' + body;
+      const ok = window.omcLead
+        ? await window.omcLead.submit(OLE_FORM, { email: email, phone: phone, message: 'Interés: ' + interest })
+        : false;
+      if (ok) {
         finish(true, emailEl, telEl);
         return;
       }
-
-      try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_KEY,
-            subject: 'Nueva solicitud de demo — OléCAD',
-            from_name: 'OléCAD Web',
-            email: email,
-            phone: phone,
-            interest: interest,
-          }),
-        });
-        const data = await res.json();
-        finish(!!data.success, emailEl, telEl);
-      } catch (_) {
-        finish(false, emailEl, telEl);
-      }
+      // Respaldo: abrir el cliente de correo
+      const subject = encodeURIComponent('Solicitud de demo OléCAD');
+      const body = encodeURIComponent('Interés: ' + interest + '\nEmail: ' + email + '\nTeléfono: ' + phone);
+      window.location.href = 'mailto:contacto@olecad.com?subject=' + subject + '&body=' + body;
+      finish(true, emailEl, telEl);
     });
   };
 

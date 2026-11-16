@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
     "src/index.html",
     "src/aviso-legal.html",
     "src/consent.js",
+    "src/lead-form.js",
     "src/robots.txt",
     "src/llms.txt",
     "src/_headers",
