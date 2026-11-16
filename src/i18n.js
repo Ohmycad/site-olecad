@@ -14,8 +14,7 @@ window.OLE_I18N = {
     hero_eyebrow: "Partner oficial Dassault Systèmes · Espanha & Portugal",
     hero_title: 'SOLIDWORKS e <em>3DEXPERIENCE</em>,<br />sem <span class="ink-underline">fricções</span>.',
     hero_sub:
-      "Implementação, formação e acompanhamento dedicados para startups deeptech, PMEs industriais, freelancers e grandes contas — com a solidez da rede Ohmycad, n.º 1 mundial Dassault Systèmes em 2025.",
-    hero_meta_1: "Google 4,9 · 300+ avaliações",
+      "Implementação, formação e acompanhamento dedicados para startups deeptech, PMEs industriais, freelancers e grandes contas — com a solidez da rede Ohmycad, primeiro revendedor de 3DEXPERIENCE do mundo em 2025.",
     hero_meta_2: "Licença de arranque gratuita",
     hero_meta_3: "Resposta < 24 h",
     hero_cta_1: "Reservar 30 min com um expert",
@@ -26,9 +25,9 @@ window.OLE_I18N = {
     book_foot1: "↳ 30 min · vídeo · sem compromisso",
     book_foot2: "PT · ES · EN · FR",
     chip_1: "+1.500 clientes na Europa",
-    chip_2: "Partner Dassault #1 mundial · 2025",
+    chip_2: "Rede Ohmycad · N.º 1 mundial 3DEXPERIENCE 2025",
     stat_1: "clientes acompanhados na Europa",
-    stat_2: "Partner Dassault mundial",
+    stat_2: "revendedor 3DEXPERIENCE do mundo (rede Ohmycad)",
     stat_3: "tempo de resposta garantido",
     stat_4: "soluções Dassault Systèmes",
     marquee_label: "Confiado por equipas de engenharia em Portugal, Espanha e em toda a Europa",
@@ -110,7 +109,7 @@ window.OLE_I18N = {
     network_eyebrow: "Rede Ohmycad",
     network_h2: "A experiência OléCAD, a força da Ohmycad.",
     network_p1:
-      "Como partner certificado, a OléCAD apoia-se na rede Ohmycad — n.º 1 mundial Dassault Systèmes em 2025.",
+      "A OléCAD apoia-se na Ohmycad, rede especializada em 3DEXPERIENCE e primeiro revendedor de 3DEXPERIENCE do mundo em 2025: tem um interlocutor local, com a força de uma rede mundial.",
     network_p2:
       "Procedimentos comprovados, suporte de nível internacional e proximidade real em Portugal e Espanha: o melhor dos dois mundos.",
     network_cta: "Descobrir a rede Ohmycad",
@@ -151,25 +150,6 @@ window.OLE_I18N = {
     plan3_f4: "Workshops & governança PLM",
     plan3_cta: "Contactar a equipa",
     // testimonials
-    testi_eyebrow: "Testemunhos",
-    testi_h2: "+1.500 equipas de engenharia já confiam na OléCAD.",
-    testi1_q:
-      "Migrámos todo o gabinete técnico para a 3DEXPERIENCE em seis semanas. A equipa OléCAD geriu tudo sem termos de parar a produção.",
-    testi1_r: "CTO · PME hardware · Barcelona",
-    testi2_q:
-      "Como startup hardware, não podíamos permitir-nos uma licença full. A oferta EIC fez-nos ganhar um ano inteiro de desenvolvimento. Suporte impecável.",
-    testi2_r: "CEO · Startup deeptech · Lisboa",
-    testi3_q:
-      "O OhMyCare é o que melhor diferencia a OléCAD. Todos os meses uma sessão de coaching, uma melhoria concreta. Nada de venda agressiva, só experts disponíveis.",
-    testi3_r: "Diretor de I&D · Indústria · Madrid",
-    rs_1: "300+ avaliações Google",
-    rs_2: "clientes ativos",
-    rs_3: "taxa de renovação",
-    proof_widget_sub: "baseado em mais de 300 avaliações Google verificadas",
-    proof_widget_tag: "› Widget Google Reviews · integração pendente",
-    review_mohammad:
-      "“I had a great technical support session with Alan and Léo from Ohmycad. They explained clearly how to save files on 3DEXPERIENCE and manage revisions with the maturity cycle. The session was very helpful, professional, and easy to follow. Highly recommend their support team!”",
-    review_meta: "Avaliação verificada · Google",
     legal_eyebrow: "Aviso legal",
     legal_h2: "Informação legal",
     legal_l1: "Titular do site",

@@ -1545,3 +1545,6 @@ body[data-typo="mono"] h3 { font-weight: 600; letter-spacing: -0.04em; }
 .post__body img{ max-width:100%; border-radius:var(--r); margin:20px 0; }
 .post__foot{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-top:44px; padding-top:28px; border-top:1px solid var(--c-line); }
 .post__more{ font-family:var(--ff-mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--c-accent); text-decoration:none; }
+
+/* 16/11/2026 : les chips flottantes et le halo du hero débordaient de 17 px (défilement horizontal) */
+html, body { overflow-x: clip; }
