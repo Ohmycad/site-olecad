@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://olecad.com/sitemap.xml

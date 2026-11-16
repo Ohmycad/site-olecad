@@ -4,7 +4,7 @@
 # ============================================================
 backend:
   name: github
-  repo: vroux18/olecad   # repo existant partage avec toi
+  repo: Ohmycad/site-olecad
   branch: main
 
 locale: es

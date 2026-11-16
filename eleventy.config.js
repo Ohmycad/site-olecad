@@ -18,6 +18,10 @@ module.exports = function (eleventyConfig) {
     "src/admin",
     "src/index.html",
     "src/aviso-legal.html",
+    "src/consent.js",
+    "src/robots.txt",
+    "src/llms.txt",
+    "src/_headers",
   ];
   passthrough.forEach((p) => eleventyConfig.addPassthroughCopy(p));
   ["src/index.html", "src/aviso-legal.html"].forEach((p) => eleventyConfig.ignores.add(p));

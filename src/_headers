@@ -1,0 +1,14 @@
+# En-têtes HTTP (format _headers, lu par Cloudflare Pages), repris de netlify.toml le 16/11/2026
+https://site-olecad.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:hash.site-olecad.pages.dev/*
+  X-Robots-Tag: noindex
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
