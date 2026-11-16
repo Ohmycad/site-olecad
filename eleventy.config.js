@@ -10,6 +10,7 @@ const slugify = (s) =>
 module.exports = function (eleventyConfig) {
   // --- Static marketing site: copied verbatim, never templated ---
   const passthrough = [
+    "src/.nojekyll",
     "src/assets",
     "src/screenshots",
     "src/styles.css",
@@ -21,7 +22,6 @@ module.exports = function (eleventyConfig) {
     "src/lead-form.js",
     "src/robots.txt",
     "src/llms.txt",
-    "src/_headers",
   ];
   passthrough.forEach((p) => eleventyConfig.addPassthroughCopy(p));
   ["src/index.html", "src/aviso-legal.html"].forEach((p) => eleventyConfig.ignores.add(p));

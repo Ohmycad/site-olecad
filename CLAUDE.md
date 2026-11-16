@@ -5,7 +5,7 @@ Mode d'emploi pour un agent IA (Claude Code, Cursor...) qui modifie ce site. Le 
 ## Le site
 - Site de OléCAD, membre du réseau Ohmycad. Langue : espagnol (portugais en option sur l'accueil).
 - Générateur : Eleventy 2 (`npm run build` → `_site/`, `npm run serve` pour prévisualiser en local).
-- Hébergement : Cloudflare Pages, projet relié à `Ohmycad/site-olecad`. **Chaque push sur `main` met le site en ligne en 1 à 2 minutes.** Adresse technique : https://site-olecad.pages.dev
+- Hébergement : GitHub Pages (dépôt public `Ohmycad/site-olecad`, workflow `.github/workflows/pages.yml`). **Chaque push sur `main` met le site en ligne en 1 à 2 minutes** (onglet Actions du dépôt pour suivre la publication).
 - Accueil : src/index.html (page unique en espagnol) + src/i18n.js (traductions portugaises, clé par clé).
 - Pages légales : src/aviso-legal.html (aviso legal + section Privacidad y cookies, servie sans .html).
 - Scripts : src/app.js (constante OLE_FORM), src/consent.js, src/lead-form.js.
