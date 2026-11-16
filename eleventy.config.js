@@ -15,7 +15,6 @@ module.exports = function (eleventyConfig) {
     "src/styles.css",
     "src/app.js",
     "src/i18n.js",
-    "src/admin",
     "src/index.html",
     "src/aviso-legal.html",
     "src/consent.js",

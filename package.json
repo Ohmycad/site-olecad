@@ -1,7 +1,7 @@
 {
   "name": "olecad-website",
   "version": "1.0.0",
-  "description": "OléCAD — Website + Blog (Eleventy + Decap CMS)",
+  "description": "OléCAD — Website + Blog (Eleventy)",
   "scripts": { "build": "eleventy", "serve": "eleventy --serve" },
   "devDependencies": { "@11ty/eleventy": "^2.0.1" }
 }
